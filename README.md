@@ -26,6 +26,13 @@ During the paused state the LED is blinking.
 
 ![Photo of the breadboard setup](https://github.com/jehutting/omxplayer-player/raw/master/image-1.jpg)
 
+The main target is the controlling of omxplayer by the GPIO. However, it can also be controlled by the keyboard.
+
+The functions:<br>
+- SPACE key, the play/pause function<br>
+- the 'p' key for the previous function<br>
+- the 'n' key for the next function<br>
+
 The program is terminated by the 'ESC' (Escape) or 'q' key.
 
 ### Usage Examples
@@ -50,13 +57,13 @@ The playing of the audio/video is done with OMXPlayer.
 
 The GPIO support is done with python module 'RPi.GPIO'.
 
-With the following commands you can use the Raspbian Jessie GPIOs without the need to be root (superuser):
+With the following commands you can use the Raspbian Jessie GPIOs without the need to be root (superuser):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo groupadd gpio<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo usermod -aG gpio USERNAME<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo reboot<br>
 
 
-### HARDWARE
+### Hardware
 
 Currently there are 3 buttons and 1 led hardwired.
 
@@ -72,6 +79,7 @@ GND (GPIO header pin 6)
 +3.3V --->--- button -----> GPIOx
 
 GPIO x --->-----| Kathode  LED  Anode |-----> GND
+
 
 
 ## History
