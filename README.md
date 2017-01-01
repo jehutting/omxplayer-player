@@ -57,6 +57,11 @@ The playing of the audio/video is done with OMXPlayer.
 
 The GPIO support is done with python module 'RPi.GPIO'.
 
+Install Rpi.GPIO with:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install python-rpi.gpio
+For usage with python3:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install python3-rpi.gpio
+
 With the following commands you can use the Raspbian Jessie GPIOs without the need to be root (superuser):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo groupadd gpio<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo usermod -aG gpio USERNAME<br>
