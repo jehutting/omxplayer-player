@@ -6,9 +6,9 @@ A player controlling omxplayer by gpio (/buttons) or keyboard keys.
 
 This python program has been written as an example to have the [Raspberry pi as mp3 player without LCD](https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=168392).
 
-The program runs on a Raspberry Pi and is written in python.
+The program runs on a Raspberry Pi with OS Raspbian Jessie.
 
-The program is terminated by pressing the 'ESC' (Escape) or 'q' key.
+It is written in python. Tested with Python version 2 (2.7.9) as well as version 3 (3.4.2).
 
 ## Usage
 
@@ -17,14 +17,29 @@ To run the program<br>
 where<br>
 &nbsp;&nbsp;&nbsp;&nbsp;FILE_EXTENSION is optional and defaulted 'mp3'.<br> 
 
+To run it under Python3, just replace python with python3.
+
 As OMXPlayer is able to play video, the playing is not only limitted to .mp3 files. 
 
 Currently hardwired 3 buttons (Play, Previous and Next) and 1 LED (Play/Paused).
-When the player is playing the LED is on. Pressing the play button pauses the playing.
-Again pressing the Play button, the playing is resumed.
-During the paused state the LED is blinking.
 
 ![Photo of the breadboard setup](https://github.com/jehutting/omxplayer-player/raw/master/image-1.jpg)
+
+
+The player starts playing the first file on the list.
+
+Pressing the play button pauses the playing. Again pressing the Play button, the playing is resumed.
+
+When the player is playing the LED is on. During the paused state the LED is blinking.
+
+The next button stops the current one being played and the player continuous to play the next one on the list.
+
+The previous button stops the current one being played, and the player continouous with the previous one on the list.
+
+Playing of the files is continuously: when reaching the end of the list, it continuous with the first one.
+Therefore the sequence is : first => ... last => first ... etc.
+Pressing the previous button when the first file is the current one being played, 
+the player continuous the playing of the last file., 
 
 The main target is the controlling of omxplayer by the GPIO. However, it can also be controlled by the keyboard.
 
@@ -48,16 +63,17 @@ To play all mkv video files in the folder '/home/pi/movies':<br>
 
 ## Details
 
-### The audio(/video) player (OMXPlayer)
+### The audio(/video) player OMXPlayer
 
-The playing of the audio/video is done with OMXPlayer.
+The playing of the audio/video file is done with OMXPlayer.
+OMXPlayer is the standard player on the Raspberry Pi. It is part of the distribution, and therefore it needs not to be installed
 
 
 ### GPIO
 
 The GPIO support is done with python module 'RPi.GPIO'.
 
-Install Rpi.GPIO with:<br>
+Install RPi.GPIO with:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install python-rpi.gpio
 For usage with python3:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;sudo apt-get install python3-rpi.gpio
@@ -81,9 +97,9 @@ ledPlay => GPIO22 (GPIO header pin 15)<br>
 +3.3V (GPIO header pin 3)<br>
 GND (GPIO header pin 6)
 
-+3.3V --->--- button -----> GPIOx
++3.3V --->---| button |-----> GPIOx
 
-GPIO x --->-----| Kathode  LED  Anode |-----> GND
+GPIOxx --->-----| Kathode  LED  Anode |----[ resistor 330R ]----> GND
 
 
 
