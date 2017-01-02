@@ -15,7 +15,8 @@ It is written in python. Tested with Python version 2 (2.7.9) as well as version
 To run the program<br>
 &nbsp;&nbsp;&nbsp;&nbsp;python omxplayer-player DIRECTORY [FILE_EXTENSION]<br>
 where<br>
-&nbsp;&nbsp;&nbsp;&nbsp;FILE_EXTENSION is optional and defaulted 'mp3'.<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;DIRECTORY is the directory (/folder) containing the files to play.<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;FILE_EXTENSION is optional and defaulted to 'mp3'.<br> 
 
 To run it under Python3, just replace python with python3.
 
@@ -28,17 +29,17 @@ Currently hardwired 3 buttons (Play, Previous and Next) and 1 LED (Play/Paused).
 
 The player starts playing the first file on the list.
 
-Pressing the play button pauses the playing. Again pressing the Play button, the playing is resumed.
+Pressing the Play button pauses the playing. Again pressing the Play button, the playing is resumed.
 
 When the player is playing the LED is on. During the paused state the LED is blinking.
 
-The next button stops the current one being played and the player continuous to play the next one on the list.
+The Next button stops the current one being played and the player continuous to play the next one on the list.
 
-The previous button stops the current one being played, and the player continouous with the previous one on the list.
+The Previous button stops the current one being played, and the player continouous with the previous one on the list.
 
 Playing of the files is continuously: when reaching the end of the list, it continuous with the first one.
 Therefore the sequence is : first => ... last => first ... etc.
-Pressing the previous button when the first file is the current one being played, 
+Pressing the Previous button when the first file is the current one being played, 
 the player continuous the playing of the last file., 
 
 The main target is the controlling of omxplayer by the GPIO. However, it can also be controlled by the keyboard.
@@ -66,7 +67,7 @@ To play all mkv video files in the folder '/home/pi/movies':<br>
 ### The audio(/video) player OMXPlayer
 
 The playing of the audio/video file is done with OMXPlayer.
-OMXPlayer is the standard player on the Raspberry Pi. It is part of the distribution, and therefore it needs not to be installed
+OMXPlayer is the standard player on the Raspberry Pi. It is part of the distribution, and therefore it needs not to be installed.
 
 
 ### GPIO
