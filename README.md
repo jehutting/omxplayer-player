@@ -14,7 +14,7 @@ It is written in python. Tested with Python version 2 (2.7.9) as well as version
 
 To run the program<br>
 &nbsp;&nbsp;&nbsp;&nbsp;python omxplayer-player DIRECTORY [FILE_EXTENSION]<br>
-where<br>
+where:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;DIRECTORY is the directory (/folder) containing the files to play.<br> 
 &nbsp;&nbsp;&nbsp;&nbsp;FILE_EXTENSION is optional and defaulted to 'mp3'.<br> 
 
@@ -102,6 +102,10 @@ GND (GPIO header pin 6)
 
 GPIOxx --->-----| Kathode  LED  Anode |----[ resistor 330R ]----> GND
 
+
+## Contact
+
+Change requests / improvements / comments are welcome and can be made through Github's Issue or Personal Message (PM), or direct to jehutting@gmail.com  
 
 
 ## History
