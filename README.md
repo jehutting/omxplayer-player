@@ -44,7 +44,7 @@ the player continuous the playing of the last file.,
 
 The main target is the controlling of omxplayer by the GPIO. However, it can also be controlled by the keyboard.
 
-The functions:<br>
+The keys and their functions:<br>
 - SPACE key, the play/pause function<br>
 - the 'p' key for the previous function<br>
 - the 'n' key for the next function<br>
@@ -100,7 +100,7 @@ GND (GPIO header pin 6)
 
 +3.3V --->---| button |-----> GPIOx
 
-GPIOxx --->-----| Kathode  LED  Anode |----[ resistor 330R ]----> GND
+GPIOxx --->-----| Anode  LED  Kathode |----[ resistor 330R ]----> GND
 
 
 ## Contact
