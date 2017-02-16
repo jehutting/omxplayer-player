@@ -20,6 +20,9 @@ where:<br>
 
 To run it under Python3, just replace python with python3.
 
+After a 'chmod +x omxplayer-player.py' you can also run the program straight ahead<br>
+&nbsp;&nbsp;&nbsp;&nbsp;omxplayer-player ARGUMENTS<br>
+
 As OMXPlayer is able to play video, the playing is not only limitted to .mp3 files. 
 
 Currently hardwired 3 buttons (Play, Previous and Next) and 1 LED (Play/Paused).
@@ -88,15 +91,16 @@ With the following commands you can use the Raspbian Jessie GPIOs without the ne
 ### Hardware
 
 Currently there are 3 buttons and 1 led hardwired.
+(GPIOxx is the BROADCOM name, and pin# means pin number)
 
-btnPlay => GPIO25 (GPIO header pin 22)<br>
-btnPrevious => GPIO23 (GPIO header pin 16)<br>
-btnNext => GPIO24 (GPIO header pin 18)<br>
-ledPlay => GPIO22 (GPIO header pin 15)<br>
+btnPlay => GPIO25 (= GPIO header pin# 22)<br>
+btnPrevious => GPIO23 (= GPIO header pin# 16)<br>
+btnNext => GPIO24 (= GPIO header pin# 18)<br>
+ledPlay => GPIO22 (= GPIO header pin# 15)<br>
 
 
-+3.3V (GPIO header pin 3)<br>
-GND (GPIO header pin 6)
++3.3V (= GPIO header pin# 1)<br>
+GND (= GPIO header pin# 6)
 
 +3.3V --->---| button |-----> GPIOx
 
